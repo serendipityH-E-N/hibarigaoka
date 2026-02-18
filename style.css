@@ -349,7 +349,7 @@ footer {
    Responsive (スマホ表示の修正版)
    ========================================================================== */
 @media (max-width: 768px) {
-    /* 1. 横揺れ防止の基本設定 */
+    /* 1. 全体設定：はみ出し防止 */
     body {
         overflow-x: hidden;
         width: 100%;
@@ -361,7 +361,7 @@ footer {
         padding: 15px;
     }
     
-    /* 2. タイトル文字サイズ調整 */
+    /* 2. タイトル文字 */
     .hero-title {
         font-size: 13vw; 
         line-height: 1.2;
@@ -377,26 +377,38 @@ footer {
         font-size: 0.75rem;
     }
 
-    /* 3. メニュー表の調整 */
+    /* 3. メニュー表 */
     .pricing-table {
         width: 100%;
     }
-
     .pricing-table td {
         font-size: 0.85rem;
         padding: 10px 5px;
     }
 
-    /* 4. マップの強制調整（ここが重要！） */
-    .map-container iframe {
-        width: 100% !important;      /* 横幅を画面ピッタリにする */
-        max-width: 100% !important;  /* 絶対にはみ出させない */
-        height: 300px !important;    /* 高さは少し控えめに */
+    /* 4. マップの強力な修正（ここを追加しました！） */
+    .access-info {
+        flex-direction: column; /* 縦並びにする */
+        width: 100%;
     }
     
-    /* セクションの余白調整 */
+    .access-content, 
+    .map-container {
+        width: 100%;
+        min-width: 0; /* 【重要】最小幅の制限を解除する */
+        margin: 0;
+    }
+
+    /* 地図本体を画面幅に強制的に合わせる */
+    .map-container iframe {
+        width: 100% !important;
+        max-width: 100vw !important; /* 画面幅以上には絶対させない */
+        height: 300px !important;
+        display: block; /* 隙間をなくす */
+    }
+    
     section {
-        padding: 50px 15px;
+        padding: 50px 20px;
     }
 }
 /* ==========================================================================
