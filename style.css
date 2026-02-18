@@ -253,11 +253,6 @@ nav ul li a:hover {
     background-color: #f0f7f7; 
 }
 
-/* テーブルの行に少し色をつけて読みやすく（シマシマにする場合） */
-.pricing-table tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
-
 .pricing-table td {
     padding: 15px 20px;
 }
