@@ -159,21 +159,51 @@ nav ul li a:hover {
     font-size: 1.1rem;
 }
 
+/* ==========================================================================
+   Gallery Layout (Mosaic Style)
+   ========================================================================== */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+    /* PCでは4列のグリッドにする */
+    grid-template-columns: repeat(4, 1fr);
+    /* 画像同士の隙間 */
+    gap: 10px;
+    /* グリッドの高さを自動調整 */
+    grid-auto-flow: dense;
 }
 
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+/* 画像を枠いっぱいに綺麗にトリミングして表示 */
 .gallery-item img {
     width: 100%;
-    height: 300px;
-    object-fit: cover;
-    transition: 0.5s;
+    height: 100%;
+    object-fit: cover; /* これがないと画像が歪みます */
+    display: block;
+    aspect-ratio: 1 / 1; /* 基本は正方形にする */
+    transition: transform 0.5s ease;
 }
 
+/* ▼ ここが魔法のコード：1枚目だけ大きくする ▼ */
+.gallery-item:nth-child(1) {
+    grid-column: span 2; /* 横に2つ分 */
+    grid-row: span 2;    /* 縦に2つ分 */
+}
+
+/* マウスを乗せた時のズーム効果 */
 .gallery-item:hover img {
-    transform: scale(1.05);
+    transform: scale(1.1);
+}
+
+/* スマホ用：2列に戻す */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* ==========================================================================
