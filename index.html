@@ -1,34 +1,233 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serendipity | Billboard</title>
+    <title>Serendipity | Total Beauty Salon</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Noto+Sans+JP:wght@300;400&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
+
 <body>
 
-    <section class="billboard" id="billboard">
-        <div class="billboard-inner">
-            <div class="logo-area">
-                <span class="category">hair eyelash nail</span>
-                <h1 class="site-title">Serendipity</h1>
-                <p class="subtitle">セレンディピティ</p>
+    <header>
+        <div class="logo">Serendipity</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#access">Access</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="hero-subtitle">hair eyelash nail</p>
+            <h1 class="hero-title">Serendipity</h1>
+            <div class="hero-description">
+                <p>西武池袋線　ひばりが丘駅徒歩3分<br>
+                    Serendipityは、みなさまの美を総合的にサポートする<br>
+                    地域密着型のトータルビューティーサロンです。<br>
+                    アイラッシュ、ヘアー、ネイルメニューがございます。</p>
             </div>
-            
-            <div class="description">
-                <p class="station-info">西武池袋線 ひばりが丘駅徒歩3分</p>
-                <p class="main-text">
-                    Serendipityは、みなさまの美を総合的にサポートする<br class="pc-only">
-                    地域密着型のトータルビューティーサロンです。
-                </p>
-                <p class="sub-text">アイラッシュ、ヘアー、ネイルメニューがございます。</p>
-            </div>
-            
-            <a href="#menu" class="btn-menu">menu</a>
         </div>
     </section>
+
+    <section class="about">
+        <h2 class="section-title">Concept</h2>
+        <div class="about-text">
+            <p>Srendipityでは、アイラッシュエクステンション、まつげパーマ、<br>
+                ジェルネイル、スカルプチュア、ヘアカラー、カット、ヘアセット、着付け等<br>
+                お客様の美を総合的にサポートするメニューが揃っています。<br>
+                <br>
+                ヘアドネーション賛同店
+            </p>
+        </div>
+        <a href="#menu" class="btn">View Menu</a>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nail Art">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Eyelash">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Hair Salon">
+        </div>
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Hair Style">
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="menu-category">
+            <h3 class="category-title">まつ毛エクステ</h3>
+            <table class="pricing-table">
+                <tr><td class="service-name">LEDに変更</td><td class="service-price">＋¥1,000</td></tr>
+                <tr><td class="service-name">ダブルフラット 80束</td><td class="service-price">¥8,200</td></tr>
+                <tr><td class="service-name">ダブルフラット 100束</td><td class="service-price">¥9,200</td></tr>
+                <tr><td class="service-name">ダブルフラット 120束</td><td class="service-price">¥10,200</td></tr>
+                <tr><td class="service-name">ダブルフラット 140束</td><td class="service-price">¥11,200</td></tr>
+                <tr><td class="service-name">フラットラッシュ 80本</td><td class="service-price">¥6,200</td></tr>
+                <tr><td class="service-name">フラットラッシュ 100本</td><td class="service-price">¥6,700</td></tr>
+                <tr><td class="service-name">フラットラッシュ 120本</td><td class="service-price">¥7,200</td></tr>
+                <tr><td class="service-name">フラットラッシュ 140本</td><td class="service-price">¥7,700</td></tr>
+                <tr><td class="service-name">フラットラッシュ つけ放題</td><td class="service-price">¥8,700</td></tr>
+                <tr><td class="service-name">バインドロック 60束〈180本〉</td><td class="service-price">¥7,200</td></tr>
+                <tr><td class="service-name">バインドロック 80束〈240本〉</td><td class="service-price">¥8,200</td></tr>
+                <tr><td class="service-name">バインドロック 100束〈300本〉</td><td class="service-price">¥9,200</td></tr>
+                <tr><td class="service-name">バインドロック 120束〈360本〉</td><td class="service-price">¥10,200</td></tr>
+                <tr><td class="service-name">バインドロック 140束〈420本〉</td><td class="service-price">¥11,200</td></tr>
+                <tr><td class="service-name">3Dボリュームラッシュ 80束〈240本〉</td><td class="service-price">¥7,700</td></tr>
+                <tr><td class="service-name">3Dボリュームラッシュ 100束〈300本〉</td><td class="service-price">¥8,700</td></tr>
+                <tr><td class="service-name">3Dボリュームラッシュ 120束〈360本〉</td><td class="service-price">¥9,700</td></tr>
+                <tr><td class="service-name">アイシャンプー</td><td class="service-price">¥500</td></tr>
+                <tr><td class="service-name">アイパック</td><td class="service-price">¥500</td></tr>
+                <tr><td class="service-name">フラットラッシュカラー</td><td class="service-price">同料金</td></tr>
+                <tr><td class="service-name">当店付替オフ</td><td class="service-price">¥0</td></tr>
+                <tr><td class="service-name">他店付替オフ</td><td class="service-price">¥500</td></tr>
+                <tr><td class="service-name">まつ毛パーマオフ</td><td class="service-price">¥500</td></tr>
+            </table>
+        </div>
+
+        <div class="menu-category">
+            <h3 class="category-title">まつ毛パーマ</h3>
+            <table class="pricing-table">
+                <tr><td class="service-name">まつ毛パーマ（基本/学割）</td><td class="service-price">¥5,000</td></tr>
+                <tr><td class="service-name">まつ毛パーマ〈マイラミネーション〉</td><td class="service-price">¥6,900</td></tr>
+                <tr><td class="service-name">まつ毛パーマ〈ヒト幹細胞培養Tr付〉</td><td class="service-price">¥5,200</td></tr>
+                <tr><td class="service-name">まつ毛パーマ〈アイパック＆ヒト幹細胞培養Tr付〉</td><td class="service-price">¥5,600</td></tr>
+            </table>
+        </div>
+
+        <div class="menu-category">
+            <h3 class="category-title">Nail（ハンドジェルネイル）</h3>
+            <p class="menu-note">※ファイル・ドライケア込み</p>
+            <table class="pricing-table">
+                <tr><td class="service-name">クリア</td><td class="service-price">¥5,500</td></tr>
+                <tr><td class="service-name">ワンカラー</td><td class="service-price">¥6,300</td></tr>
+                <tr><td class="service-name">ラメグラデーション</td><td class="service-price">¥6,200</td></tr>
+                <tr><td class="service-name">フレンチ・逆フレンチ</td><td class="service-price">¥6,600</td></tr>
+                <tr><td class="service-name">カラーグラデーション</td><td class="service-price">¥6,800</td></tr>
+            </table>
+        </div>
+
+        <div class="menu-category">
+            <h3 class="category-title">Nail（フットジェルネイル / オフ・他）</h3>
+            <table class="pricing-table">
+                <tr><td class="service-name">フット ワンカラー・ラメ</td><td class="service-price">¥7,000</td></tr>
+                <tr><td class="service-name">角質除去・マッサージ</td><td class="service-price">¥9,000</td></tr>
+                <tr><td class="service-name">当店付替ジェルオフ</td><td class="service-price">¥500</td></tr>
+                <tr><td class="service-name">他店付替ジェルオフ</td><td class="service-price">¥1,500</td></tr>
+                <tr><td class="service-name">当店ジェルオフのみ</td><td class="service-price">¥2,000</td></tr>
+                <tr><td class="service-name">長さ出し(1本)</td><td class="service-price">¥800</td></tr>
+                <tr><td class="service-name">スカルプチュア（クリア・ナチュラル）</td><td class="service-price">¥500</td></tr>
+                <tr><td class="service-name">チップ</td><td class="service-price">¥500</td></tr>
+            </table>
+        </div>
+
+        <div class="menu-category">
+            <h3 class="category-title">Hair</h3>
+            <table class="pricing-table">
+                <tr><td class="service-name">一般カット（ブロー込み）</td><td class="service-price">¥4,200</td></tr>
+                <tr><td class="service-name">小学生（kids）</td><td class="service-price">¥2,000</td></tr>
+                <tr><td class="service-name">バングカット</td><td class="service-price">¥1,000</td></tr>
+                <tr><td class="service-name">リタッチカラー</td><td class="service-price">¥5,800</td></tr>
+                <tr><td class="service-name">オールタッチカラー</td><td class="service-price">¥6,500</td></tr>
+                <tr><td class="service-name">アシッドカラー</td><td class="service-price">¥6,500〜</td></tr>
+                <tr><td class="service-name">ヘナ（1タッチ）</td><td class="service-price">¥7,500〜</td></tr>
+                <tr><td class="service-name">ヘナ（2タッチ）</td><td class="service-price">¥10,000〜</td></tr>
+                <tr><td class="service-name">セミロング追加</td><td class="service-price">＋¥500</td></tr>
+                <tr><td class="service-name">ロング追加</td><td class="service-price">＋¥1,000</td></tr>
+            </table>
+        </div>
+
+        <div class="menu-category">
+            <h3 class="category-title">パーマ・トリートメント・セット</h3>
+            <p class="menu-note">※シャンプー・カット・ブロー込み（一部除く）</p>
+            <table class="pricing-table">
+                <tr><td class="service-name">ベーシックパーマ</td><td class="service-price">¥9,500</td></tr>
+                <tr><td class="service-name">クリニックパーマ</td><td class="service-price">¥10,500</td></tr>
+                <tr><td class="service-name">縮毛矯正</td><td class="service-price">¥12,000</td></tr>
+                <tr><td class="service-name">プレトリートメント</td><td class="service-price">¥1,000</td></tr>
+                <tr><td class="service-name">ダメージ補修セット</td><td class="service-price">¥3,500</td></tr>
+                <tr><td class="service-name">ブロー</td><td class="service-price">¥2,000</td></tr>
+                <tr><td class="service-name">ダウンスタイル</td><td class="service-price">¥3,500〜</td></tr>
+                <tr><td class="service-name">アップ</td><td class="service-price">¥4,500〜</td></tr>
+                <tr><td class="service-name">和髪</td><td class="service-price">¥5,500〜</td></tr>
+            </table>
+        </div>
+
+        <div class="menu-category">
+            <h3 class="category-title">着付け・Makeup</h3>
+            <table class="pricing-table">
+                <tr><td class="service-name">振袖</td><td class="service-price">¥13,000</td></tr>
+                <tr><td class="service-name">留袖</td><td class="service-price">¥10,000</td></tr>
+                <tr><td class="service-name">訪問着・つけ下げ</td><td class="service-price">¥9,000</td></tr>
+                <tr><td class="service-name">はかま</td><td class="service-price">¥8,000</td></tr>
+                <tr><td class="service-name">浴浴衣</td><td class="service-price">¥4,500</td></tr>
+                <tr><td class="service-name">七五三 3歳（セット込）</td><td class="service-price">¥7,000</td></tr>
+                <tr><td class="service-name">七五三 5歳（セット込）</td><td class="service-price">¥6,000</td></tr>
+                <tr><td class="service-name">七五三 7歳（セット込）</td><td class="service-price">¥11,000</td></tr>
+            </table>
+        </div>
+    </section>
+
+    <section id="access" class="access">
+        <h2 class="section-title">Access</h2>
+        <div class="access-info">
+            <div class="access-content">
+                <h3>Serendipity</h3>
+                <div class="access-row">
+                    <span class="access-label">ADDRESS</span>
+                    <p>〒202-0001 東京都西東京市ひばりが丘1-4-28<br>
+                        西武池袋線　ひばりが丘駅　南口より徒歩3分</p>
+                </div>
+                <div class="access-row">
+                    <span class="access-label">TEL</span>
+                    <p>04-2439-4119</p>
+                </div>
+                <div class="access-row">
+                    <span class="access-label">OPEN</span>
+                    <p>10:00〜19:00(L.O)</p>
+                </div>
+                <div class="access-row">
+                    <span class="access-label">CLOSE</span>
+                    <p>5, 15, 25日</p>
+                </div>
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.8286940862024!2d139.54460017631976!3d35.75501862592534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018efbe1b99a531%3A0xc348d217997a31b!2sSerendipity!5e0!3m2!1sja!2sjp!4v1700000000000"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-buttons">
+            <a href="https://beauty.hotpepper.jp/kr/slnH000483866/" class="btn btn-reserve" target="_blank" rel="noopener noreferrer">
+                Hot Pepper Beauty
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <span class="footer-logo">Serendipity</span>
+        <div class="footer-social">
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </div>
+        <p>© Serendipity Total Beauty Salon. All Rights Reserved.</p>
+    </footer>
 
 </body>
 </html>
