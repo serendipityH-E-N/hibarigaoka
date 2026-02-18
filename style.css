@@ -1,8 +1,9 @@
 /* ==========================================================================
    Base Styles
    ========================================================================== */
-/* 筆記体フォントの読み込み */
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+/* style.css の一番上に貼り付け（Playfair Displayを読み込む） */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
 
 * {
     margin: 0;
@@ -98,12 +99,19 @@ nav ul li a:hover {
 }
 
 .hero-title {
-    /* 筆記体の適用 */
-    font-family: 'Great Vibes', cursive;
-    font-size: 6rem; 
+    /* Playfair Display を指定 */
+    font-family: 'Playfair Display', serif;
+    
+    /* 斜体にして筆記体のような優雅さを出す */
+    font-style: italic; 
+    
+    /* 文字サイズ（以前より少し小さくても読みやすいので調整） */
+    font-size: 5.5rem; 
+    
     margin-bottom: 20px;
-    letter-spacing: 5px;
+    letter-spacing: 0.05em; /* 文字の間隔を少し詰めて上品に */
 }
+
 
 .hero-description {
     background: rgba(255, 255, 255, 0.7);
