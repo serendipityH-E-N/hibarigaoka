@@ -79,7 +79,7 @@ nav ul li a:hover {
     /* 背景画像をダマスク柄に変更し、少し白を被せて馴染ませています */
     background: 
         linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
-        url('bg-damask.jpg');
+        url('bg-damask.png');
     background-size: 400px;
     background-repeat: repeat;
     color: #333;
