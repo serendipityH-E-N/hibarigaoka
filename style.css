@@ -349,9 +349,9 @@ footer {
    Responsive (スマホ表示の修正版)
    ========================================================================== */
 @media (max-width: 768px) {
-    /* 1. 横揺れ・文字切れ防止の基本設定 */
+    /* 1. 横揺れ防止の基本設定 */
     body {
-        overflow-x: hidden; /* 画面からはみ出した部分を隠す */
+        overflow-x: hidden;
         width: 100%;
     }
 
@@ -361,40 +361,40 @@ footer {
         padding: 15px;
     }
     
-    /* 2. タイトル「Serendipity」を画面幅に合わせて自動調整 */
+    /* 2. タイトル文字サイズ調整 */
     .hero-title {
-        /* 「vw」は画面の横幅に対する％です。これで絶対に画面内に収まります！ */
         font-size: 13vw; 
         line-height: 1.2;
     }
     
     nav ul {
-        gap: 10px; /* メニューの隙間を少し狭く */
-        flex-wrap: wrap; /* メニューが多い場合に折り返す */
+        gap: 10px;
+        flex-wrap: wrap;
         justify-content: center;
     }
     
     nav ul li a {
-        font-size: 0.75rem; /* メニュー文字を少し小さく */
+        font-size: 0.75rem;
     }
 
-    /* 3. メニュー表がはみ出さないように調整 */
+    /* 3. メニュー表の調整 */
     .pricing-table {
         width: 100%;
     }
 
     .pricing-table td {
-        font-size: 0.85rem; /* 文字を少し小さく */
-        padding: 10px 5px;  /* 隙間を詰める */
+        font-size: 0.85rem;
+        padding: 10px 5px;
     }
 
-    /* 4. マップの高さをスマホ用に小さくする */
+    /* 4. マップの強制調整（ここが重要！） */
     .map-container iframe {
-        /* PCの450pxから300pxに変更（!importantで強制適用） */
-        height: 300px !important; 
+        width: 100% !important;      /* 横幅を画面ピッタリにする */
+        max-width: 100% !important;  /* 絶対にはみ出させない */
+        height: 300px !important;    /* 高さは少し控えめに */
     }
     
-    /* セクションの余白もスマホ用にスッキリさせる */
+    /* セクションの余白調整 */
     section {
         padding: 50px 15px;
     }
