@@ -342,3 +342,62 @@ footer {
         font-size: 0.9rem;
     }
 }
+/* ==========================================================================
+   Animation Settings
+   ========================================================================== */
+
+/* 1. スクロールでふわっと出すための準備 */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease-out;
+}
+
+/* 画面に入った時にこのクラスがつく */
+.fade-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 2. ヒーロータイトルの登場アニメーション */
+.hero-title {
+    animation: fadeInTitle 2s ease-in-out forwards;
+    opacity: 0; /* 最初は隠しておく */
+}
+
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 3. ギャラリー画像のズームイン */
+.gallery-item {
+    overflow: hidden; /* 拡大しても枠からはみ出さないように */
+    border-radius: 5px; /* 角を少し丸く */
+}
+
+.gallery-item img {
+    transition: transform 0.6s ease; /* 0.6秒かけて変化 */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1); /* マウスが乗ったら1.1倍に拡大 */
+}
+
+/* ボタンにも動きを（おまけ） */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #333;
+    color: #fff;
+    transform: translateY(-3px); /* 少し上に浮き上がる */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* 影をつける */
+}
