@@ -1,7 +1,7 @@
 /* ==========================================================================
    Base Styles
    ========================================================================== */
-/* style.css の一番上に貼り付け */
+/* 筆記体フォントの読み込み */
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 * {
@@ -53,8 +53,6 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 2px;
-    /* ロゴも筆記体にしたい場合は、下の行の「/*」と「*/」を消してください */
-    /* font-family: 'Great Vibes', cursive; */
 }
 
 nav ul {
@@ -81,12 +79,12 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* 背景画像をダマスク柄に変更し、少し白を被せて馴染ませています */
-    /* 【重要】拡張子を jpg に修正しました */
+    
+    /* 背景画像の設定 */
     background: 
         linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
-        url('bg-damask.png');
-    background-size: 1000px;
+        url('bg-damask.png'); /* ファイル名が正しいか確認してください */
+    background-size: 1000px; /* 柄の大きさ */
     background-repeat: repeat;
     color: #333;
     width: 100%;
@@ -100,20 +98,17 @@ nav ul li a:hover {
 }
 
 .hero-title {
-    /* ここを修正しました：シンプルな書き方に変更 */
+    /* 筆記体の適用 */
     font-family: 'Great Vibes', cursive;
-    
-    /* 筆記体は小さく見えるので、少し大きめに設定しました */
     font-size: 6rem; 
-    
     margin-bottom: 20px;
-    letter-spacing: 5px; /* 筆記体なので少し間隔を狭めました */
+    letter-spacing: 5px;
 }
 
 .hero-description {
     background: rgba(255, 255, 255, 0.7);
     padding: 30px;
-    backdrop-filter: blur(8px); /* 背景をぼかして文字を浮き立たせる */
+    backdrop-filter: blur(8px);
     border-radius: 2px;
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -182,7 +177,7 @@ nav ul li a:hover {
 }
 
 /* ==========================================================================
-   Menu
+   Menu（ここを色変更しました！）
    ========================================================================== */
 .menu {
     background-color: #fdfdfd;
@@ -192,19 +187,24 @@ nav ul li a:hover {
     margin-bottom: 60px;
 }
 
+/* メニューのタイトル帯の設定 */
 .category-title {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: center;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
+    margin-bottom: 0; /* テーブルとくっつけるために余白をなくしました */
+    padding: 15px 0;
+    
+    /* ▼ここに画像の色を設定しました */
+    background-color: #66b2b2; 
+    color: #ffffff; /* 文字は白 */
+    letter-spacing: 2px;
 }
 
 .menu-note {
     text-align: center;
     color: #666;
     font-size: 0.9em;
-    margin-bottom: 1rem;
+    margin: 10px 0;
 }
 
 .pricing-table {
@@ -215,20 +215,27 @@ nav ul li a:hover {
 }
 
 .pricing-table tr {
-    border-bottom: 1px dotted #ccc;
+    border-bottom: 1px solid #eee;
+}
+
+/* テーブルの行に少し色をつけて読みやすく（シマシマにする場合） */
+.pricing-table tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
 .pricing-table td {
-    padding: 12px 0;
+    padding: 15px 20px;
 }
 
 .service-name {
     text-align: left;
+    color: #555;
 }
 
 .service-price {
     text-align: right;
     font-weight: bold;
+    color: #333;
 }
 
 /* ==========================================================================
@@ -319,7 +326,7 @@ footer {
     }
     
     .hero-title {
-        font-size: 4rem; /* スマホの時は少し小さめに調整 */
+        font-size: 4rem;
     }
     
     nav ul {
@@ -328,5 +335,10 @@ footer {
     
     nav ul li a {
         font-size: 0.8rem;
+    }
+    
+    .pricing-table td {
+        padding: 10px;
+        font-size: 0.9rem;
     }
 }
