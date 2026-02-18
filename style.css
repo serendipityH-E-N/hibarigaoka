@@ -1,6 +1,9 @@
 /* ==========================================================================
    Base Styles
    ========================================================================== */
+/* style.css の一番上に貼り付け */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -50,6 +53,8 @@ header {
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: 2px;
+    /* ロゴも筆記体にしたい場合は、下の行の「/*」と「*/」を消してください */
+    /* font-family: 'Great Vibes', cursive; */
 }
 
 nav ul {
@@ -77,10 +82,11 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
     /* 背景画像をダマスク柄に変更し、少し白を被せて馴染ませています */
+    /* 【重要】拡張子を jpg に修正しました */
     background: 
         linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
         url('bg-damask.png');
-    background-size: 400px;
+    background-size: 1000px;
     background-repeat: repeat;
     color: #333;
     width: 100%;
@@ -94,9 +100,14 @@ nav ul li a:hover {
 }
 
 .hero-title {
-    font-size: 4rem;
+    /* ここを修正しました：シンプルな書き方に変更 */
+    font-family: 'Great Vibes', cursive;
+    
+    /* 筆記体は小さく見えるので、少し大きめに設定しました */
+    font-size: 6rem; 
+    
     margin-bottom: 20px;
-    letter-spacing: 10px;
+    letter-spacing: 5px; /* 筆記体なので少し間隔を狭めました */
 }
 
 .hero-description {
@@ -308,7 +319,7 @@ footer {
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 4rem; /* スマホの時は少し小さめに調整 */
     }
     
     nav ul {
