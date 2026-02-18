@@ -237,6 +237,21 @@
         </div>
         <p>© Serendipity Total Beauty Salon. All Rights Reserved.</p>
     </footer>
+<script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
 
+            document.querySelectorAll('section, .gallery-item, .menu-category').forEach(el => {
+                el.classList.add('fade-in-up');
+                observer.observe(el);
+            });
+        });
+    </script>
 </body>
 </html>
