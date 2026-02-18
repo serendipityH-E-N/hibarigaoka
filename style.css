@@ -1,4 +1,6 @@
-/* 基本設定 */
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -6,103 +8,314 @@
 }
 
 body {
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
     color: #333;
     line-height: 1.6;
+    background-color: #fff;
 }
 
-/* ビルボード全体 */
-.billboard {
-    position: relative;
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
     width: 100%;
-    height: 100vh; /* 画面いっぱいに表示 */
-    min-height: 600px;
-    background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1600'); /* サンプル画像。ご自身画像に差し替えてください */
-    background-size: cover;
-    background-position: center;
+    top: 0;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: #888;
+}
+
+/* ==========================================================================
+   Hero Section (ダマスク柄背景)
+   ========================================================================== */
+.hero {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-
-/* 背景を少し暗くして文字を読みやすくする場合（必要に応じて） */
-.billboard::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(255, 255, 255, 0.2); /* 白っぽいオーバーレイ */
-}
-
-.billboard-inner {
-    position: relative;
-    z-index: 1;
-    padding: 20px;
-}
-
-/* ロゴ・タイトル周り */
-.category {
-    display: block;
-    font-size: 14px;
-    letter-spacing: 0.2em;
-    margin-bottom: 10px;
-}
-
-.site-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 64px;
-    font-weight: 400;
-    font-style: italic;
-    margin-bottom: 5px;
-}
-
-.subtitle {
-    font-size: 12px;
-    letter-spacing: 0.3em;
-    margin-bottom: 40px;
-}
-
-/* 説明文 */
-.description {
-    margin-bottom: 40px;
-}
-
-.station-info {
-    font-size: 13px;
-    margin-bottom: 15px;
-}
-
-.main-text {
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-
-.sub-text {
-    font-size: 14px;
-}
-
-/* ボタン */
-.btn-menu {
-    display: inline-block;
-    padding: 12px 60px;
-    border: 1px solid #333;
-    text-decoration: none;
+    /* 背景画像をダマスク柄に変更し、少し白を被せて馴染ませています */
+    background: 
+        linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), 
+        url('bg-damask.jpg');
+    background-size: 400px;
+    background-repeat: repeat;
     color: #333;
-    font-size: 14px;
-    transition: all 0.3s ease;
+    width: 100%;
+    max-width: none;
 }
 
-.btn-menu:hover {
-    background-color: #333;
+.hero-subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    letter-spacing: 10px;
+}
+
+.hero-description {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 30px;
+    backdrop-filter: blur(8px); /* 背景をぼかして文字を浮き立たせる */
+    border-radius: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* ==========================================================================
+   Common Components
+   ========================================================================== */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 1px;
+    background: #333;
+    margin: 20px auto 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 40px;
+    border: 1px solid #333;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    background: transparent;
+}
+
+.btn:hover {
+    background: #333;
     color: #fff;
 }
 
-/* レスポンシブ対応 */
-.pc-only { display: block; }
+/* ==========================================================================
+   About / Gallery
+   ========================================================================== */
+.about {
+    text-align: center;
+}
 
+.about-text {
+    margin-bottom: 30px;
+    font-size: 1.1rem;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   Menu
+   ========================================================================== */
+.menu {
+    background-color: #fdfdfd;
+}
+
+.menu-category {
+    margin-bottom: 60px;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-note {
+    text-align: center;
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 1rem;
+}
+
+.pricing-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.pricing-table tr {
+    border-bottom: 1px dotted #ccc;
+}
+
+.pricing-table td {
+    padding: 12px 0;
+}
+
+.service-name {
+    text-align: left;
+}
+
+.service-price {
+    text-align: right;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   Access / Contact
+   ========================================================================== */
+.access-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.access-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.access-content h3 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.access-row {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.access-label {
+    font-weight: bold;
+    width: 80px;
+    flex-shrink: 0;
+    color: #888;
+}
+
+.map-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact {
+    text-align: center;
+    background: #f9f9f9;
+}
+
+.btn-reserve {
+    background: #c3a164;
+    color: white !important;
+    border: none;
+    padding: 20px 50px;
+    font-size: 1.2rem;
+}
+
+.btn-reserve:hover {
+    background: #b18d4d;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+.footer-logo {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
 @media (max-width: 768px) {
-    .site-title { font-size: 48px; }
-    .pc-only { display: none; }
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    nav ul {
+        gap: 15px;
+    }
+    
+    nav ul li a {
+        font-size: 0.8rem;
+    }
 }
