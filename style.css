@@ -1,0 +1,108 @@
+/* 基本設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ビルボード全体 */
+.billboard {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* 画面いっぱいに表示 */
+    min-height: 600px;
+    background-image: url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=1600'); /* サンプル画像。ご自身画像に差し替えてください */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* 背景を少し暗くして文字を読みやすくする場合（必要に応じて） */
+.billboard::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.2); /* 白っぽいオーバーレイ */
+}
+
+.billboard-inner {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+}
+
+/* ロゴ・タイトル周り */
+.category {
+    display: block;
+    font-size: 14px;
+    letter-spacing: 0.2em;
+    margin-bottom: 10px;
+}
+
+.site-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 400;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-size: 12px;
+    letter-spacing: 0.3em;
+    margin-bottom: 40px;
+}
+
+/* 説明文 */
+.description {
+    margin-bottom: 40px;
+}
+
+.station-info {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.main-text {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.sub-text {
+    font-size: 14px;
+}
+
+/* ボタン */
+.btn-menu {
+    display: inline-block;
+    padding: 12px 60px;
+    border: 1px solid #333;
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-menu:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* レスポンシブ対応 */
+.pc-only { display: block; }
+
+@media (max-width: 768px) {
+    .site-title { font-size: 48px; }
+    .pc-only { display: none; }
+}
