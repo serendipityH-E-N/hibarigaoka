@@ -264,6 +264,94 @@ nav ul li a:hover {
 .pricing-table td {
     padding: 15px 20px;
 }
+/* ==========================================================================
+   Caution Box (注意事項)
+   ========================================================================== */
+.caution-box {
+    margin-top: 50px; /* 上のメニュー表との間隔 */
+    padding: 30px;
+    background-color: #f9f9f9; /* 背景をごく薄いグレーに */
+    border-top: 3px solid #66b2b2; /* 上にティファニーブルーの線を入れる */
+    border-radius: 4px;
+    text-align: left; /* 文字は左寄せで読みやすく */
+    max-width: 800px; /* 横幅が広がりすぎないように */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.caution-title {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #333;
+    letter-spacing: 2px;
+}
+
+.caution-group {
+    margin-bottom: 30px; /* 項目ごとの間隔 */
+    border-bottom: 1px dashed #ddd; /* 点線で区切る */
+    padding-bottom: 20px;
+}
+
+/* 最後の項目だけ線なし */
+.caution-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.caution-group h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+    background: #fff; /* 見出しの背景を白に */
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+
+.caution-group ul {
+    list-style-type: disc; /* 黒丸をつける */
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.caution-group li {
+    margin-bottom: 5px;
+    font-size: 0.95rem;
+}
+
+.caution-group p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.caution-red {
+    color: #cc0000; /* 注意書きを赤文字に */
+    font-weight: bold;
+    font-size: 0.9rem;
+    background: #fff0f0; /* 薄い赤背景で目立たせる */
+    padding: 10px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* スマホ用の調整 */
+@media (max-width: 768px) {
+    .caution-box {
+        padding: 20px 15px; /* スマホでは余白を少し狭く */
+        margin-top: 30px;
+    }
+    
+    .caution-title {
+        font-size: 1.1rem;
+    }
+    
+    .caution-group li, 
+    .caution-group p {
+        font-size: 0.85rem; /* 文字サイズを少し小さくして改行を防ぐ */
+    }
+}
 
 .service-name {
     text-align: left;
