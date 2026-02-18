@@ -247,6 +247,11 @@ nav ul li a:hover {
 .pricing-table tr {
     border-bottom: 1px solid #eee;
 }
+/* メニューの表をシマシマにして見やすくする */
+.pricing-table tr:nth-child(even) {
+    /* お店のテーマカラーに合わせた、ごく薄いミントグリーン */
+    background-color: #f0f7f7; 
+}
 
 /* テーブルの行に少し色をつけて読みやすく（シマシマにする場合） */
 .pricing-table tr:nth-child(even) {
