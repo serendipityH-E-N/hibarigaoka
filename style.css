@@ -547,7 +547,7 @@ footer {
     /* トップの文章（白い枠）のスマホ調整 */
     .hero-description p {
         /* vw（画面幅の割合）を使うと、どんなスマホでも1行に収まるように自動で小さくなります */
-        font-size: 3.0vw; 
+        font-size: 2.8vw; 
         line-height: 1.8; 
     }
 
