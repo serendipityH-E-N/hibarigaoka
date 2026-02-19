@@ -537,21 +537,28 @@ footer {
         font-size: 0.85rem;
     }
 
-    /* 6. 長いメニュータイトルを1行に収める設定（ここを追加しました！） */
-    .category-title.title-long {
-        font-size: 4.8vw; 
-        white-space: nowrap; 
-    }
-/* トップの文章（白い枠）のスマホ調整 */
+    /* 6. トップの文章（白い枠）のスマホ調整 */
     .hero-description {
-        padding: 20px 10px; /* 枠の余白を減らして、文字のスペースを広げる */
-        width: 95%; /* 枠の横幅を画面ギリギリまで広げる */
-        margin: 0 auto; /* 真ん中によせる */
+        padding: 20px 10px; 
+        width: 95%; 
+        margin: 0 auto; 
     }
     
     .hero-description p {
-        font-size: 0.9rem; /* 文字を少しだけ小さくして、1行に収める */
-        line-height: 1.8; /* 行間を少し広げて読みやすく */
+        font-size: 0.9rem; 
+        line-height: 1.8; 
+    }
+
+    /* PC用の改行をスマホでは無効化して自然に折り返す */
+    .hero-description br {
+        display: none;
+    }
+
+    /* 7. 長いメニュータイトルを1行に収める設定 */
+    .category-title.title-long {
+        font-size: 3.8vw; 
+        white-space: nowrap; 
+        letter-spacing: 0; 
     }
 }
 /* ==========================================================================
