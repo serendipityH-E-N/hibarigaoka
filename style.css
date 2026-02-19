@@ -303,7 +303,9 @@ nav ul li a:hover {
     text-align: right;
     font-weight: bold;
     color: #333;
+    white-space: nowrap; /* ← これを追加！絶対に改行させない設定です */
 }
+
 
 /* ==========================================================================
    Caution Box (注意事項)
