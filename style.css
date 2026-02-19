@@ -544,14 +544,11 @@ footer {
         margin: 0 auto; 
     }
     
+    /* トップの文章（白い枠）のスマホ調整 */
     .hero-description p {
-        font-size: 0.9rem; 
+        /* vw（画面幅の割合）を使うと、どんなスマホでも1行に収まるように自動で小さくなります */
+        font-size: 3.2vw; 
         line-height: 1.8; 
-    }
-
-    /* PC用の改行をスマホでは無効化して自然に折り返す */
-    .hero-description br {
-        display: none;
     }
 
     /* 7. 長いメニュータイトルを1行に収める設定 */
