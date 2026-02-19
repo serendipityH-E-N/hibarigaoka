@@ -542,6 +542,17 @@ footer {
         font-size: 4.8vw; 
         white-space: nowrap; 
     }
+/* トップの文章（白い枠）のスマホ調整 */
+    .hero-description {
+        padding: 20px 10px; /* 枠の余白を減らして、文字のスペースを広げる */
+        width: 95%; /* 枠の横幅を画面ギリギリまで広げる */
+        margin: 0 auto; /* 真ん中によせる */
+    }
+    
+    .hero-description p {
+        font-size: 0.9rem; /* 文字を少しだけ小さくして、1行に収める */
+        line-height: 1.8; /* 行間を少し広げて読みやすく */
+    }
 }
 /* ==========================================================================
    Animations
