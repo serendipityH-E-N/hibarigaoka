@@ -227,9 +227,13 @@ nav ul li a:hover {
     background-color: #66b2b2; 
     color: #ffffff;
     letter-spacing: 2px;
-    cursor: pointer; /* 指マークにする */
+    cursor: pointer; 
     position: relative;
     transition: background-color 0.3s;
+    
+    /* ↓↓↓ ここから下の2行を追加します ↓↓↓ */
+    font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif; /* 上品な明朝体を指定 */
+    font-style: italic; /* 少し斜めにして筆記体のような動きを出す */
 }
 
 .category-title:hover {
